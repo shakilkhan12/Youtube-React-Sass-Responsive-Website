@@ -1,0 +1,44 @@
+.show {
+  @include bgImage("/images/1.jpg");
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include flexVertical();
+  color: $white;
+
+  &__content h1 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  &__card {
+    position: absolute;
+    bottom: -230px;
+    width: 470px;
+    padding: 80px 40px;
+    background: $green;
+    right: 0;
+    color: $black;
+    @include responsive(765px) {
+      width: 300px;
+      bottom: -500px;
+    }
+
+    &-h6 {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    &-h4 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #0c0f16;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+}
